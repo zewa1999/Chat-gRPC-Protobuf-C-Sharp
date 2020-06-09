@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package chatto;
+
+option csharp_namespace = "Proto";
+
+message ConnectionStatus {
+		UserAction user_action = 1;
+	}
+	
+	message UserAction {
+		ActionType action_type = 1;
+		string name = 2;
+
+		enum ActionType {
+			JOIN = 0;
+			LEAVE = 1;
+		}
+	}
